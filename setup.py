@@ -192,6 +192,8 @@ setup(
         'pybind11>=2.6'
     ],
     setup_requires=['pybind11>=2.6'],
+    package_dir={'': 'stubs'},
+    package_data={'skia': ['*.pyi', 'py.typed']},
     cmdclass={'build_ext': BuildExt},
     command_options={
         'build_sphinx': {
